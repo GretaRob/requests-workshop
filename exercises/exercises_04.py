@@ -81,7 +81,7 @@ def create_xml_body_from_string():
 
 
 def test_send_xml_body_from_elementtree_check_status_code_is_200_and_name_is_correct():
-    xml = create_xml_body_using_elementtree()
+    xml = create_xml_body_from_string()
     xml_as_string = et.tostring(xml)
     response = requests.post(
         "http://parabank.parasoft.com/parabank/services/bank/billpay?accountId=12345&amount=500",
